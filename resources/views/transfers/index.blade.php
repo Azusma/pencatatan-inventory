@@ -1,4 +1,4 @@
-@extends('layouts.app', ['page' => 'Transfers', 'pageSlug' => 'transfers', 'section' => 'transactions'])
+@extends('layouts.app', ['page' => 'Pengiriman', 'pageSlug' => 'Pengiriman', 'section' => 'transaksi'])
 
 @section('content')
     @include('alerts.success')
@@ -8,11 +8,11 @@
                 <div class="card-header">
                 <div class="row">
                         <div class="col-8">
-                            <h4 class="card-title">Transfers</h4>
+                            <h4 class="card-title">Pengiriman</h4>
                         </div>
                         <div class="col-4 text-right">
                             <a href="{{ route('transfer.create') }}" class="btn btn-sm btn-primary">
-                                Register Transfer
+                                Daftar Pengiriman
                             </a>
                         </div>
                     </div>
@@ -20,13 +20,13 @@
                 <div class="card-body">
                     <table class="table">
                         <thead class=" text-primary">
-                            <th>Date</th>
-                            <th>Title</th>
-                            <th>Sender Method</th>
-                            <th>Receiver Method</th>
-                            <th>Reference</th>
-                            <th>Amount Sent</th>
-                            <th>Amount Received</th>
+                            <th>Tanggal</th>
+                            <th>Judul</th>
+                            <th>Metode Pengiriman</th>
+                            <th>Metode Penerimaan</th>
+                            <th>Referensi</th>
+                            <th>Total Pengiriman</th>
+                            <th>Total Penerimaan</th>
                             <th></th>
                         </thead>
                         <tbody>

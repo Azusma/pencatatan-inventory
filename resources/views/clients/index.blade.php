@@ -1,4 +1,4 @@
-@extends('layouts.app', ['page' => 'Clients', 'pageSlug' => 'clients', 'section' => 'clients'])
+@extends('layouts.app', ['page' => 'Pelanggan', 'pageSlug' => 'Pelanggan', 'section' => 'Pelanggan'])
 
 @section('content')
     <div class="row">
@@ -7,10 +7,10 @@
                 <div class="card-header">
                     <div class="row">
                         <div class="col-8">
-                            <h4 class="card-title">Clients</h4>
+                            <h4 class="card-title">Pelanggan</h4>
                         </div>
                         <div class="col-4 text-right">
-                            <a href="{{ route('clients.create') }}" class="btn btn-sm btn-primary">Add Client</a>
+                            <a href="{{ route('clients.create') }}" class="btn btn-sm btn-primary">Tambah Pelanggan</a>
                         </div>
                     </div>
                 </div>
@@ -20,12 +20,12 @@
                     <div class="">
                         <table class="table tablesorter " id="">
                             <thead class=" text-primary">
-                                <th>Name</th>
-                                <th>Email / Telephone</th>
-                                <th>Balance</th>
-                                <th>Purchases</th>
-                                <th>Total Payment</th>
-                                <th>Last purchase</th>
+                                <th>Nama</th>
+                                <th>Email / No HP</th>
+                                <th>Saldo</th>
+                                <th>Pembelian</th>
+                                <th>Total Pembayaran</th>
+                                <th>Pembelian Terakhir</th>
                                 <th></th>
                             </thead>
                             <tbody>

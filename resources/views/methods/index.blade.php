@@ -1,4 +1,4 @@
-@extends('layouts.app', ['page' => 'Methods', 'pageSlug' => 'methods', 'section' => 'methods'])
+@extends('layouts.app', ['page' => 'Metoden Pembayaran', 'pageSlug' => 'methods', 'section' => 'Metode'])
 
 @section('content')
     @include('alerts.success')
@@ -8,10 +8,10 @@
                 <div class="card-header">
                     <div class="row">
                         <div class="col-8">
-                            <h4 class="card-title">Bank Accounts / Payment Methods</h4>
+                            <h4 class="card-title">Akun Bank / Metode Pembayaran</h4>
                         </div>
                         <div class="col-4 text-right">
-                            <a href="{{ route('methods.create') }}" class="btn btn-sm btn-primary">New Method</a>
+                            <a href="{{ route('methods.create') }}" class="btn btn-sm btn-primary">Tambah Metode Pembayaran Baru</a>
                         </div>
                     </div>
                 </div>
@@ -20,10 +20,10 @@
                     <div class="">
                         <table class="table tablesorter " id="">
                             <thead class=" text-primary">
-                                <th scope="col">Method</th>
-                                <th scope="col">Description</th>
-                                <th scope="col">Monthly Transactions</th>
-                                <th scope="col">Monthly Balance</th>
+                                <th scope="col">Metode</th>
+                                <th scope="col">Deskripsi</th>
+                                <th scope="col">Transaksi Bulanan</th>
+                                <th scope="col">Total Transaksi Bulanan</th>
                                 <th scope="col"></th>
                             </thead>
                             <tbody>

@@ -1,4 +1,4 @@
-@extends('layouts.app', ['pageSlug' => 'tstats', 'page' => 'Statistics', 'section' => 'transactions'])
+@extends('layouts.app', ['pageSlug' => 'tstats', 'page' => 'Statistik', 'section' => 'Transaksi'])
 
 @section('content')
     <div class="row">
@@ -7,11 +7,11 @@
                 <div class="card-header">
                     <div class="row">
                         <div class="col-8">
-                            <h4 class="card-title">Transaction Statistics</h4>
+                            <h4 class="card-title">Statistik Transaksi</h4>
                         </div>
                         <div class="col-4 text-right">
                             <a href="{{ route('transactions.index') }}" class="btn btn-sm btn-primary">
-                                View Transactions
+                                Lihat Transaksi
                             </a>
                         </div>
                     </div>
@@ -19,13 +19,13 @@
                 <div class="card-body">
                         <table class="table">
                             <thead>
-                                <th>Period</th>
-                                <th>Transactions</th>
-                                <th>Income</th>
-                                <th>Expenses</th>
-                                <th>Payments</th>
-                                <th>Cash Balance</th>
-                                <th>Total balance</th>
+                                <th>Periode</th>
+                                <th>Transaksi</th>
+                                <th>Pendapatan</th>
+                                <th>Beban</th>
+                                <th>Pembayaran</th>
+                                <th>Saldo</th>
+                                <th>Total Saldo</th>
                                 <th></th>
                             </thead>
                             <tbody>
@@ -54,10 +54,10 @@
                 <div class="card-header">
                     <div class="row">
                         <div class="col-8">
-                            <h4 class="card-title">Pending Balances</h4>
+                            <h4 class="card-title">Saldo Tertunda</h4>
                         </div>
                         <div class="col-4 text-right">
-                            <a href="{{ route('clients.index') }}" class="btn btn-sm btn-primary">View Clients</a>
+                            <a href="{{ route('clients.index') }}" class="btn btn-sm btn-primary">Lihat Pelanggan</a>
                         </div>
                     </div>
                 </div>
@@ -65,10 +65,10 @@
                     <div class="table-full-width table-responsive">
                         <table class="table">
                             <thead>
-                                <th>Client</th>
-                                <th>Purchases</th>
-                                <th>Transactions</th>
-                                <th>Balance</th>
+                                <th>Pelanggan</th>
+                                <th>Pembelian</th>
+                                <th>Transaksi</th>
+                                <th>Saldo</th>
                                 <th></th>
                             </thead>
                             <tbody>
@@ -108,10 +108,10 @@
                 <div class="card-header">
                     <div class="row">
                         <div class="col-8">
-                            <h4 class="card-title">Statistics by Methods</h4>
+                            <h4 class="card-title">Statistik Berdasarkan Metode</h4>
                         </div>
                         <div class="col-4 text-right">
-                            <a href="{{ route('methods.index') }}" class="btn btn-sm btn-primary">View Methods</a>
+                            <a href="{{ route('methods.index') }}" class="btn btn-sm btn-primary">Lihat Metode</a>
                         </div>
                     </div>
                 </div>
@@ -119,9 +119,9 @@
                     <div class="table-full-width table-responsive">
                         <table class="table">
                             <thead>
-                                <th>Method</th>
-                                <th>Transactions {{ $date->year }}</th>
-                                <th>Balance {{ $date->year }}</th>
+                                <th>Metode</th>
+                                <th>Transaksi {{ $date->year }}</th>
+                                <th>Saldo {{ $date->year }}</th>
                                 <th></th>
                             </thead>
                             <tbody>
@@ -151,23 +151,23 @@
             <div class="card-header">
                 <div class="row">
                     <div class="col-8">
-                        <h4 class="card-title">Sales Statistics</h4>
+                        <h4 class="card-title">Statistik Penjualan</h4>
                     </div>
                     <div class="col-4 text-right">
-                        <a href="{{ route('sales.index') }}" class="btn btn-sm btn-primary">View Sales</a>
+                        <a href="{{ route('sales.index') }}" class="btn btn-sm btn-primary">Lihat Penjualan</a>
                     </div>
                 </div>
             </div>
             <div class="card-body">
                 <table class="table">
                     <thead>
-                        <th>Period</th>
-                        <th>Sales</th>
-                        <th>Clients</th>
-                        <th>Total Stock</th>
+                        <th>Periode</th>
+                        <th>Penjualan</th>
+                        <th>Pelanggan</th>
+                        <th>Total Stok</th>
                         <th data-toggle="tooltip" data-placement="bottom" title="Promedio de ingresos por cada venta">Average C / V</th>
-                        <th>Billed Amount</th>
-                        <th>To Finalize</th>
+                        <th>Jumlah Tagihan</th>
+                        <th>Penyelesaian</th>
                     </thead>
                     <tbody>
                         @foreach ($salesperiods as $period => $data)

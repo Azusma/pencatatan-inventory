@@ -1,4 +1,4 @@
-@extends('layouts.app', ['page' => 'Sales', 'pageSlug' => 'sales', 'section' => 'transactions'])
+@extends('layouts.app', ['page' => 'Penjualan', 'pageSlug' => 'penjualan', 'section' => 'transaksi'])
 
 @section('content')
     @include('alerts.success')
@@ -8,10 +8,10 @@
                 <div class="card-header">
                     <div class="row">
                         <div class="col-8">
-                            <h4 class="card-title">Sales</h4>
+                            <h4 class="card-title">Penjualan</h4>
                         </div>
                         <div class="col-4 text-right">
-                            <a href="{{ route('sales.create') }}" class="btn btn-sm btn-primary">Register Sale</a>
+                            <a href="{{ route('sales.create') }}" class="btn btn-sm btn-primary">Daftar Penjualan</a>
                         </div>
                     </div>
                 </div>
@@ -19,12 +19,12 @@
                     <div class="">
                         <table class="table">
                             <thead>
-                                <th>Date</th>
-                                <th>Client</th>
-                                <th>User</th>
-                                <th>Products</th>
-                                <th>Total Stock</th>
-                                <th>Total Amount</th>
+                                <th>Tanggal</th>
+                                <th>Pelanggan</th>
+                                <th>Pengguna</th>
+                                <th>Produk</th>
+                                <th>Total Stok</th>
+                                <th>Total</th>
                                 <th>Status</th>
                                 <th></th>
                             </thead>

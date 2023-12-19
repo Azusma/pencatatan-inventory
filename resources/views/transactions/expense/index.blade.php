@@ -1,4 +1,4 @@
-@extends('layouts.app', ['page' => 'Expenses', 'pageSlug' => 'expenses', 'section' => 'transactions'])
+@extends('layouts.app', ['page' => 'Beban', 'pageSlug' => 'Beban', 'section' => 'Transaksi'])
 
 @section('content')
     <div class="row">
@@ -7,10 +7,10 @@
                 <div class="card-header">
                     <div class="row">
                         <div class="col-8">
-                            <h4 class="card-title">Expenses</h4>
+                            <h4 class="card-title">Beban</h4>
                         </div>
                         <div class="col-4 text-right">
-                            <a href="{{ route('transactions.create', ['type' => 'expense']) }}" class="btn btn-sm btn-primary">Register Expense</a>
+                            <a href="{{ route('transactions.create', ['type' => 'expense']) }}" class="btn btn-sm btn-primary">Tambah Beban Baru</a>
                         </div>
                     </div>
                 </div>
@@ -20,10 +20,10 @@
                     <div class="">
                         <table class="table tablesorter " id="">
                             <thead class=" text-primary">
-                                <th scope="col">Date</th>
-                                <th scope="col">Title</th>
-                                <th scope="col">Method</th>
-                                <th scope="col">Amount</th>
+                                <th scope="col">Tanggal</th>
+                                <th scope="col">Judul</th>
+                                <th scope="col">Metode</th>
+                                <th scope="col">Jumlah</th>
                                 <th scope="col">Reference</th>
                                 <th scope="col"></th>
                             </thead>

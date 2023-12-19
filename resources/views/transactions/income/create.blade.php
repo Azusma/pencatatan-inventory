@@ -1,4 +1,4 @@
-@extends('layouts.app', ['page' => 'New Income', 'pageSlug' => 'incomes', 'section' => 'transactions'])
+@extends('layouts.app', ['page' => 'Pendapatan Baru', 'pageSlug' => 'Pendapatan', 'section' => 'Transaksi'])
 
 @section('content')
     <div class="container-fluid mt--7">
@@ -8,10 +8,10 @@
                     <div class="card-header">
                         <div class="row align-items-center">
                             <div class="col-8">
-                                <h3 class="mb-0">New Income</h3>
+                                <h3 class="mb-0">Tambah Pendapatan Baru</h3>
                             </div>
                             <div class="col-4 text-right">
-                                <a href="{{ route('transactions.type', ['type' => 'income']) }}" class="btn btn-sm btn-primary">Back to List</a>
+                                <a href="{{ route('transactions.type', ['type' => 'income']) }}" class="btn btn-sm btn-primary">Kembali ke Daftar</a>
                             </div>
                         </div>
                     </div>
@@ -20,17 +20,17 @@
                             @csrf
                             <input type="hidden" name="type" value="income">
                             <input type="hidden" name="user_id" value="{{ Auth::id() }}">
-                            <h6 class="heading-small text-muted mb-4">Income Information</h6>
+                            <h6 class="heading-small text-muted mb-4">Informasi Pendapatan</h6>
                             <div class="pl-lg-4">
                                 <div class="form-group{{ $errors->has('title') ? ' has-danger' : '' }}">
-                                    <label class="form-control-label" for="input-title">Title</label>
+                                    <label class="form-control-label" for="input-title">Judul</label>
                                     <input type="text" name="title" id="input-title" class="form-control form-control-alternative{{ $errors->has('title') ? ' is-invalid' : '' }}" placeholder="Title" value="{{ old('title') }}" required autofocus>
                                     @include('alerts.feedback', ['field' => 'title'])
                                 </div>
 
 
                                 <div class="form-group{{ $errors->has('payment_method_id') ? ' has-danger' : '' }}">
-                                    <label class="form-control-label" for="input-method">Payment Method</label>
+                                    <label class="form-control-label" for="input-method">Metode Pembayaran</label>
                                     <select name="payment_method_id" id="input-method" class="form-select form-control-alternative{{ $errors->has('payment_method_id') ? ' is-invalid' : '' }}" required>
                                         @foreach ($payment_methods as $payment_method)
                                             @if($payment_method['id'] == old('payment_method_id'))
@@ -44,7 +44,7 @@
                                 </div>
 
                                 <div class="form-group{{ $errors->has('amount') ? ' has-danger' : '' }}">
-                                    <label class="form-control-label" for="input-amount">Amount</label>
+                                    <label class="form-control-label" for="input-amount">Total</label>
                                     <input type="number" step=".01" name="amount" id="input-amount" class="form-control form-control-alternative" placeholder="Amount" value="{{ old('amount') }}" min="0" required>
                                     @include('alerts.feedback', ['field' => 'amount'])
 
@@ -57,7 +57,7 @@
                                 </div>
 
                                 <div class="text-center">
-                                    <button type="submit" class="btn btn-success mt-4">Save</button>
+                                    <button type="submit" class="btn btn-success mt-4">Simpan</button>
                                 </div>
                             </div>
                         </form>

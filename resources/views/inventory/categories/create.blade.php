@@ -1,4 +1,4 @@
-@extends('layouts.app', ['page' => 'New Category', 'pageSlug' => 'categories', 'section' => 'inventory'])
+@extends('layouts.app', ['page' => 'New Kategori', 'pageSlug' => 'kategori', 'section' => 'Persediaan'])
 
 @section('content')
     <div class="container-fluid mt--7">
@@ -8,10 +8,10 @@
                     <div class="card-header">
                         <div class="row align-items-center">
                             <div class="col-8">
-                                <h3 class="mb-0">New Category</h3>
+                                <h3 class="mb-0">Tambah Kategori Baru</h3>
                             </div>
                             <div class="col-4 text-right">
-                                <a href="{{ route('categories.index') }}" class="btn btn-sm btn-primary">Back to List</a>
+                                <a href="{{ route('categories.index') }}" class="btn btn-sm btn-primary">Kembali ke Daftar</a>
                             </div>
                         </div>
                     </div>
@@ -19,16 +19,16 @@
                         <form method="post" action="{{ route('categories.store') }}" autocomplete="off">
                             @csrf
 
-                            <h6 class="heading-small text-muted mb-4">Category Information</h6>
+                            <h6 class="heading-small text-muted mb-4">Informasi Kategori</h6>
                             <div class="pl-lg-4">
                                 <div class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}">
-                                    <label class="form-control-label" for="input-name">Name</label>
+                                    <label class="form-control-label" for="input-name">Nama</label>
                                     <input type="text" name="name" id="input-name" class="form-control form-control-alternative{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="Name" value="{{ old('name') }}" required autofocus>
                                     @include('alerts.feedback', ['field' => 'name'])
                                 </div>
 
                                 <div class="text-center">
-                                    <button type="submit" class="btn btn-success mt-4">Save</button>
+                                    <button type="submit" class="btn btn-success mt-4">Simpan</button>
                                 </div>
                             </div>
                         </form>

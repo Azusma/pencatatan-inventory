@@ -1,4 +1,4 @@
-@extends('layouts.app', ['page' => 'Edit Category', 'pageSlug' => 'categories', 'section' => 'inventory'])
+@extends('layouts.app', ['page' => 'Edit Kategori', 'pageSlug' => 'Kategori', 'section' => 'Persediaan'])
 
 @section('content')
     <div class="container-fluid mt--7">
@@ -8,10 +8,10 @@
                     <div class="card-header">
                         <div class="row align-items-center">
                             <div class="col-8">
-                                <h3 class="mb-0">Edit Category</h3>
+                                <h3 class="mb-0">Edit Kategori</h3>
                             </div>
                             <div class="col-4 text-right">
-                                <a href="{{ route('categories.index') }}" class="btn btn-sm btn-primary">Back to List</a>
+                                <a href="{{ route('categories.index') }}" class="btn btn-sm btn-primary">Kembali ke Daftar</a>
                             </div>
                         </div>
                     </div>
@@ -23,14 +23,14 @@
                             <h6 class="heading-small text-muted mb-4">Category Information</h6>
                             <div class="pl-lg-4">
                                 <div class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}">
-                                    <label class="form-control-label" for="input-name">Name</label>
+                                    <label class="form-control-label" for="input-name">Nama</label>
                                     <input type="text" name="name" id="input-name" class="form-control form-control-alternative{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="Name" value="{{ old('name', $category->name) }}" required autofocus>
                                     @include('alerts.feedback', ['field' => 'name'])
                                 </div>
 
 
                                 <div class="text-center">
-                                    <button type="submit" class="btn btn-success mt-4">Save</button>
+                                    <button type="submit" class="btn btn-success mt-4">Simpan</button>
                                 </div>
                             </div>
                         </form>
